@@ -1,0 +1,27 @@
+body {
+  background-color: #222831;
+  color: #ffffff;
+  input {
+    outline: none;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    margin: 0 auto;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: #EFE1D1;
+    font-size: 14px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 14px;
+  }
+}

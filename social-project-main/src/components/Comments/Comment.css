@@ -1,0 +1,28 @@
+.comments {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 480px;
+    height: 100%;
+    background-color: #393E46;
+    transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 99;
+    overflow-y: scroll;
+}
+
+.comments.open {
+    right: 0;
+}
+
+.cross {
+    cursor: pointer;
+    position: absolute;
+    width: 30px;
+    right: 10px;
+}
+
+@media (max-width:768px) {
+    .comments {
+        width: 100%;
+    }
+}

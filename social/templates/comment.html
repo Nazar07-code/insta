@@ -1,0 +1,14 @@
+{% for comment in comments %}
+    <div>
+        <p>{{ comment.user.username }}: {{ comment.content }}</p>
+        <a href="#comment-form-{{ comment.id }}">Ответить</a>
+        
+        <div>
+            {% for reply in comment.replies.all %}
+                <div style="margin-left: 20px;">
+                    <p>{{ reply.user.username }}: {{ reply.content }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endfor %}

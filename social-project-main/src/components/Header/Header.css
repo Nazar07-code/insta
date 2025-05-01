@@ -1,0 +1,22 @@
+.header {
+    color: #e8e8e8;
+
+    .header-avatar {
+        max-width: 70px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .log-in {
+        color: #e8e8e8;
+        background-color: #1B035C;
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all .2s linear;
+
+        &:hover {
+            background-color: #2d049e;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.create-post {
+    margin: 20px auto 0;
+    padding: 20px;
+    border: 1px solid #EFE1D1;
+    border-radius: 20px;
+
+    .import-file {
+        width: 100%;
+        border: 2px solid #EFE1D1;
+        border-radius: 20px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    input {
+        width: 100%;
+        background-color: #393E46;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .description-input {
+        border-radius: 20px;
+        background-color: #393E46;
+        outline: none;
+    }
+
+    .create {
+        color: #EFE1D1;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: #335791;
+        transition: all .2s linear;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #3f31bb;
+        }
+    }
+}
+
+@media (max-width:680px) {
+    .create-post {
+        width: 500px;
+
+        .import-file {
+            height: 350px;
+
+            .imported {
+                height: 350px;
+            }
+
+            .import-img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width:550px) {
+    .create-post {
+        width: 400px;
+
+        .import-file {
+            height: 300px;
+
+            .imported {
+                height: 300px;
+            }
+        }
+    }
+}
+
+@media (max-width:450px) {
+    .create-post {
+        width: 330px;
+
+        .import-file {
+            height: 250px;
+
+            .imported {
+                height: 250px;
+            }
+        }
+    }
+}

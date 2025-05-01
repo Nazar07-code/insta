@@ -1,0 +1,100 @@
+.editMe {
+    background-color: #6c22a5;
+    color: #e8e8e8;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: all .3s linear;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #9824c2;
+    }
+}
+
+.log-out {
+    background-color: #e81919;
+    color: #e8e8e8;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: all .3s linear;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #ff3b3b;
+    }
+}
+
+.add-post {
+    background-color: #320e94;
+    color: #e8e8e8;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: all .3s linear;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #3808bb;
+    }
+}
+
+.plus {
+    display: none;
+    padding: 10px;
+}
+
+@media (max-width:768px) {
+    .links {
+        font-size: 18px;
+    }
+
+    .add-post {
+        display: none;
+    }
+
+    .plus {
+        display: flex;
+    }
+
+    .counts {
+        gap: 30px;
+    }
+}
+
+@media (max-width:510px) {
+    .counts {
+        gap: 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:495px) {
+    .info {
+        gap: 10px;
+
+        .avatar {
+            img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+}
+
+@media (max-width:440px) {
+    .info {
+        gap: 5px;
+
+        .avatar {
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+}
