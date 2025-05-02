@@ -1,42 +1,100 @@
 .create-post {
+    width: 100%;
+    max-width: 600px;
     margin: 20px auto 0;
     padding: 20px;
     border: 1px solid #EFE1D1;
     border-radius: 20px;
+    input{
+        outline: none;
+    }
 
     .import-file {
-        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 12px;
+        padding: 16px;
         border: 2px solid #EFE1D1;
         border-radius: 20px;
+        background-color: #222831;
+        min-height: 200px;
+    }
+
+    .import-img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+    }
+
+    .multi-media {
         position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        height: 400px;
-        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img,
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .remove-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            color: white;
+            background-color: rgba(220, 38, 38, 0.9);
+            border: none;
+            border-radius: 9999px;
+            font-size: 14px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background-color: rgba(185, 28, 28, 1);
+            }
+        }
     }
 
     input {
         width: 100%;
         background-color: #393E46;
-        padding: 20px;
+        padding: 16px;
         border-radius: 20px;
+        margin-top: 16px;
+        border: none;
+        color: #fff;
     }
 
     .description-input {
-        border-radius: 20px;
+        width: 100%;
+        min-height: 120px;
+        padding: 16px;
         background-color: #393E46;
-        outline: none;
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        margin-top: 16px;
+        resize: vertical;
     }
 
     .create {
-        color: #EFE1D1;
-        padding: 20px;
+        width: 100%;
+        margin-top: 20px;
+        padding: 16px;
         border-radius: 20px;
         background-color: #335791;
-        transition: all .2s linear;
+        color: #EFE1D1;
+        font-size: 16px;
         cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
 
         &:hover {
             background-color: #3f31bb;
@@ -44,49 +102,43 @@
     }
 }
 
-@media (max-width:680px) {
+@media (max-width: 768px) {
     .create-post {
-        width: 500px;
+        max-width: 500px;
+        padding: 16px;
 
         .import-file {
-            height: 350px;
-
-            .imported {
-                height: 350px;
-            }
-
-            .import-img {
-                width: 100px;
-                height: 100px;
-            }
+            gap: 10px;
         }
     }
 }
 
-@media (max-width:550px) {
+@media (max-width: 560px) {
     .create-post {
-        width: 400px;
+        max-width: 400px;
+    }
+}
 
-        .import-file {
-            height: 300px;
+@media (max-width: 480px) {
+    .create-post {
+        padding: 12px;
 
-            .imported {
-                height: 300px;
-            }
+        .multi-media .remove-button {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
         }
     }
 }
 
-@media (max-width:450px) {
+@media (max-width: 440px) {
     .create-post {
-        width: 330px;
+        max-width: 350px;
+    }
+}
 
-        .import-file {
-            height: 250px;
-
-            .imported {
-                height: 250px;
-            }
-        }
+@media (max-width: 400px) {
+    .create-post {
+        max-width: 320px;
     }
 }

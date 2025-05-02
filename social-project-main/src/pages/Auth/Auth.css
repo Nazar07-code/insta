@@ -11,6 +11,7 @@
     border-radius: 20px;
     padding: 30px 20px;
     color: #1B035C;
+    background-color: #393E46;
 
     form {
         display: flex;
@@ -20,7 +21,7 @@
         .avatar {
             width: 120px;
             margin: 0 auto;
-            background-color: #393E46;
+            background-color: #282c31;
             height: 120px;
             border-radius: 50%;
             cursor: pointer;
@@ -92,6 +93,7 @@
     border-radius: 20px;
     padding: 30px 20px;
     color: #1B035C;
+    background-color: #393E46;
 
     .avatar {
         width: 120px;

@@ -77,9 +77,30 @@ function App() {
           </MainLayout>
         }
       />
-      <Route path="/auth/register" element={<Register />} />
-      <Route path="/auth/login" element={<Login />} />
-      <Route path={`/${user?.id}/editMe`} element={<EditMe />} />
+      <Route
+        path="/auth/register"
+        element={
+          <MainLayout>
+            <Register />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/auth/login"
+        element={
+          <MainLayout>
+            <Login />
+          </MainLayout>
+        }
+      />
+      <Route
+        path={`/${user?.id}/editMe`}
+        element={
+          <MainLayout>
+            <EditMe />
+          </MainLayout>
+        }
+      />
       <Route
         path="posts/:id"
         element={

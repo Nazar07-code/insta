@@ -11,7 +11,7 @@ export const Comments = ({ commentsChangeModal, changeComments, postId }) => {
   const [replyTo, setReplyTo] = useState(null);
 
   const dispatch = useDispatch();
-  const isAuth = useSelector(selectIsAuth); // определяем авторизацию
+  const isAuth = useSelector(selectIsAuth);
   const post = useSelector((state) => state.posts.comments);
 
   useEffect(() => {
@@ -35,6 +35,7 @@ export const Comments = ({ commentsChangeModal, changeComments, postId }) => {
   const renderComments = (comments, parentId = null) => {
     return comments
       .filter((c) => c.parent === parentId)
+      .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
       .map((comment) => (
         <div
           key={comment.id}

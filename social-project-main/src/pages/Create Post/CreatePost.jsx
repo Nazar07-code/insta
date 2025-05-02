@@ -95,24 +95,24 @@ const CreatePost = () => {
               multiple
             />
             <img
-              className="import-img h-[100px] w-[100px]"
+              className="import-img"
               src="/images/folder-add.svg"
               alt="Добавить медиа"
             />
           </label>
 
           {mediaPreviews.map((item, idx) => (
-            <div key={idx} className="relative group">
+            <div key={idx} className="multi-media relative group">
               {item.type === "image" ? (
                 <img
                   src={item.preview}
                   alt="preview"
-                  className="h-[150px] w-[150px] object-cover rounded-[10px] border"
+                  className=" object-cover rounded-[10px] "
                 />
               ) : (
                 <video
                   src={item.preview}
-                  className="h-[150px] w-[150px] object-cover rounded-[10px] border"
+                  className="video object-cover rounded-[10px] "
                   controls
                 />
               )}
@@ -120,7 +120,7 @@ const CreatePost = () => {
               <button
                 type="button"
                 onClick={() => removeMedia(idx)}
-                className="absolute top-1 right-1 text-white bg-red-600 rounded-full p-1 hover:bg-red-700"
+                className="remove-button"
               >
                 ✕
               </button>
